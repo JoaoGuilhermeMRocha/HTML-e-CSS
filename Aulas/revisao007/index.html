@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="C:\Users\guilh\OneDrive\Programação - Estudos\HTML e CSS\Imagens\icone.ico" type="image/x-icon">
+    <title>Listas</title>
+</head>
+<body>
+    
+<h1>Listas ordenadas</h1>
+
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <p>As listas ordenadas são aquelas que possuem uma ordem numérica ou alfabética, sendo representadas pela tag &lt;ol&gt; e utilizando &lt;li&gt; e &lt;/li&gt; para cada item da lista.<br>
+       Elas podem ser utilizadas para exibir informações que precisam ser apresentadas em uma sequência específica, como etapas de um processo ou uma lista de prioridades.<br>
+       Podemos personalizar o tipo de lista com o atributo "type", dentro da tag &lt;ol&gt;, que pode assumir os valores "1" (números), "A" (letras maiúsculas), "a" (letras minúsculas), "I" (números romanos maiúsculos) e "i" (números romanos minúsculos).<br>
+        <br>
+       &lt;ol type="1"&gt; <br>
+       lista <br>
+       &lt;/ol&gt;
+    </p>
+
+<h1>Listas não ordenadas</h1>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <p>As listas não ordenadas são aquelas que não possuem uma ordem específica, sendo representadas pela tag &lt;ul&gt; e utilizando &lt;li&gt; e &lt;/li&gt; para cada item da lista.<br>
+       Elas podem ser utilizadas para exibir informações que não precisam ser apresentadas em uma sequência específica, como uma lista de compras ou uma lista de tarefas.<br>
+       Podemos personalizar o tipo de marcador com o atributo "type", dentro da tag &lt;ul&gt;, que pode assumir os valores "disc" (círculo preenchido), "circle" (círculo vazio) e "square" (quadrado preenchido).<br>
+        <br>
+       &lt;ul type="disc"&gt;<br>
+       lista <br>
+       &lt;/ul&gt;
+    </p>
+
+<h1>Listas aninhadas</h1>
+
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2
+            <ul>
+                <li>Subitem 2.1</li>
+                <li>Subitem 2.2</li>
+            </ul>
+        </li>
+        <li>Item 3</li>
+    </ol>
+
+    <p>As listas aninhadas são aquelas que possuem uma lista dentro de outra lista, sendo representadas pela combinação das tags &lt;ol&gt; e &lt;ul&gt;.<br>
+       Elas podem ser utilizadas para exibir informações que possuem uma hierarquia ou uma relação de dependência, como uma lista de tópicos e sub-tópicos.<br>
+       Podemos personalizar o tipo de lista e o tipo de marcador das listas aninhadas da mesma forma que as listas ordenadas e não ordenadas. Fora o fato de podermos utilizar o atributo "start" em cada nível, para definir o número inicial de cada lista isoladamente.<br>
+         <br>
+       &lt;ul start="1"&gt;<br>
+       lista <br>
+       &lt;/ul&gt;
+    </p> 
+
+
+<h1>Listas de definição</h1>
+
+    <dl>
+        <dt>Termo 1</dt>
+        <dd>Definição do termo 1</dd>
+        <dt>Termo 2</dt>
+        <dd>Definição do termo 2</dd>
+    </dl>
+
+    <p>As listas de definição são aquelas que possuem termos e suas respectivas definições, sendo representadas pela tag &lt;dl&gt;, utilizando as tags &lt;dt&gt; e &lt;/dt&gt; para os termos e &lt;dd&gt; e &lt;/dd&gt; para as definições .<br>
+       Elas podem ser utilizadas para exibir informações que precisam ser apresentadas em pares, como uma lista de palavras e seus significados ou uma lista de perguntas e respostas.<br>
+       <br>
+       &lt;dl&gt;<br>
+       &lt;dt&gt;Termo 1&lt;/dt&gt;<br>
+       &lt;dd&gt;Definição do termo 1&lt;/dd&gt;<br>
+       &lt;/dl&gt;
+    </p>
+</body>
+</html>

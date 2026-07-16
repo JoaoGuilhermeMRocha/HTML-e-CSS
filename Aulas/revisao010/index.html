@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shotcut icon" href="C:\Users\guilh\OneDrive\Programação - Estudos\HTML e CSS\Imagens\icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
+    <title>CSS</title>
+</head>
+<body>
+    <h1>Oque é o CSS?</h1>
+    <p>
+        CSS significa Folhas de estilo em cascata, e como o HTML, elas não são uma linguagem de programação em si. Nós utilizamos as CSS para dar uma "cara" para o nosso site/sistema. <br>
+        Para utilizarmos as CSS, usamos a tag &lt;style&gt;, e seus atributos. Como as CSS possuem muitos atributos, e bota <strong>MUITOS</strong> nisso, a maioria a gente vai ter que ir descobrindo com o tempo. Mas os principais são: <br>
+        <ul>
+            <li>color - cor da fonte</li>
+            <li>background-color - cor da página em si</li>
+            <li>font-size - tamanho da fonte</li>
+            <li>font-family - tipo da fonte</li>
+            <li>text-align - alinhamento</li>
+        </ul>
+    </p>
+
+    <h2>Estilos inline</h2>
+    <p>
+        Estilos inline são aqueles que colocamos diretamente nas funções e atributos, definindo cada um individualmente. Isso não é recomendando para definir o estilo do site/sistema como um todo, pois será necessário atualizar linha por linha em casos de alteração, fora o fato de misturarmos estilo e conteúdo em uma coisa só, sendo que a convesão é separarmos cada uma dessas coisas, dentro do código.
+    </p>
+    <p style="color: darkblue";>
+        Esse é um exemplo de estilo inline, onde o paragrafo está sendo escrito da seguinte forma:<br>
+        &lt;p style="color: darkblue;"&gt; Texto...
+    </p>
+
+    <h2>Estilos internos</h2>
+    <p>
+        Os estilos internos são colocados diretamente na head do código, logo abaixo do tittle. Quando usamos essa opção, seguimos utilizando o style com cada uma das suas opçãoes de configuração. Dessa forma organizamos melhor o código, e podemos fazer alterações gerais, caso necessário. <br>
+        Com essa opção, definimos os estilos da seguinte maneira: <br>
+        <pre>
+            &lt;head&gt;
+                &lt;style&gt;
+                    body {backgroud-color: darkblue;
+                    font-family: arial;
+                    font-size: 20px;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+        </pre><br>
+        Esse tipo de estilo funciona muito bem para casos em que temos somente uma página, não um ambinte mais completo, pois teriamos que escrever o style em todas as páginas do ambiente, oque seria um saco, mesmo usando crtl+v e crtl+v. Fora o fato da head ficar extremamente comprida e o body ficar lááá em baixo no VSCode.
+    </p>
+
+    <h2>Estilos externos</h2>
+    <p>
+        Esse aqui é o bala! <br>
+        Os estilos externos são os mais versateis de utilizarmos. Aqui nós não inserimos o style no body ou head do código, mas sim em um arquivo externo. <br>
+        Aqui nós vamos fazer um link, da mesma forma que fazemos com o ícone, mas dessa vez com o style. Dessa forma aqui:
+        <pre>
+            &lt;head&gt;
+            ...
+            &lt;title&gt;
+            &lt;link rel="stylesheet" href="arquivo.css"&gt;
+            &lt;/head&gt;
+        </pre><br>
+        Dessa forma, podemos configurar todo o estilo em um único lugar, e replica-lo livremente nas páginas e ambientes. <br>
+        Pô, papo 10, imagina a galera que fez o Fluid tendo que replicar style por style em cada um dos arquivos do código. <strong>PUTA QUE PARIU</strong> <br>
+        Alguns adendos, é importante que o arquivo .css inicie com '@charset "UTF-8";', dessa forma indicamos que as CSS se adequem a nossa linguagem. Também podemos mesclar os tipos de estilo, sendo que a ordem em que os estilos se sobressaem é: inline > local > externo.
+    </p>
+</body>
+</html>

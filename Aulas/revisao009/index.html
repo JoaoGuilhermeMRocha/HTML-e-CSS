@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shotcut icon" href="C:\Users\guilh\OneDrive\Programação - Estudos\HTML e CSS\Imagens\icone.ico" type="image/x-icon">
+    <title>Diferentes mídias no HTML</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>Podemos ajustar o tamanho das imagens dinamicamente, dependendo do tamanho da tela do dispositivo, diretamente no código HTML.<br>
+    Para isso, utilizados o atributo &lt;picture&gt; e &lt;source&gt;, dentro do código. Definindo diferentes fontes para diferentes tamanhos de tela.<br>
+    Vale lembrar que o atributo deve ser definido, da menor para a maior resolução, senão a imagem mais adequada não será carregada.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/img_p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/img_m.png" type="image/png">
+        <img src="imagens/img_g.png" alt="Imagem dinâmica" width="100%">
+    </picture>
+
+    <h1>Áudios</h1>
+    <p>Para adicionar áudios em uma página HTML, utilizamos a tag &lt;audio&gt;, e o atributo &lt;source&gt;, definindo o tipo de arquivo que será reproduzido.<br>
+    Podemos utilizar alguns outros atributos também, como por exemplo:
+    <ul>
+       <li>controls - Mostra o controle de áudio midia</li>
+       <li>preload - Difine oque será carregado junto da página
+        <ul>
+            <li>auto - carrega todo o arquivo, demorando mais para carregar a página. <strong>NÃO RECOMENTANDO</strong></li>
+            <li>metadado - apenas as informações base do arquivo, pesando menos no carregamento inicial da página.</li>
+            <li>none - não carrega nada.</li>
+        </ul>
+       </li>
+       <li>loop - Toca o áudio em loop</li>
+       <li>autosplay - Carrega a página com o áudio tocando</li> 
+    </ul>
+    </p>
+
+    <audio controls preload="metadata">
+        <source src="midias/audio.m4a" type="audio/m4a">
+    </audio>
+
+    <h1>Vídeos</h1>
+    <p>Para adicionar vídeos, utilizamos a tag &lt;video&gt;, e o atributo &lt;source&gt;. Os vídeos se compartam similiar aos áudios, podemos utilizar os atributos listas anterioremente aqui também. Podemos usar width também, mas nesse exemplo que usei, ao tentar usar ele na tag de vídeo, meu xablau. <br>
+    Apenas devemos nos atentar, ao tipo de vídeo que será carregado e seu tamanho, para que não pesemos de mais o site, e temanhos certeza que aquele formato escolhido é aceito pela maioria dos navegadores.
+    </p>
+
+    <video controls preload="metadata">
+        <source src="midias/video.mp4" type="video/mp4">
+    </video>
+
+    <h1>Vídeos incorporados</h1>
+    <p>Também é possível usar mídias incorporadas, direto do Youtube, Spotify, Vimeo, GoogleDrive e etc. Para isso usamos &lt;iframe&gt;, com os mesmos atributos de antes. <br>
+    Essa opção não consome armazenamento interno do equipamento que o código está alocado, e também pode ser mais fácil de utilizar, o Youtube já gera o a tag do iframe direto quando necessário, através da opção de compartilhar e incorporar.<br>
+    <strong>IMPORTANTE! O Youtube bloqueia a incorporação de vídeos para htmls hospedados diretamente em máquinas, como no caso dessas revisões, por conta disso tive que usar a extensão "Live Server" do VSCode, e abrir o index.html com a extensão, somente dessa forma a incorporação funcionou. </strong></p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2jSMAJ2opEM?si=YPu8mD4PjQsLL54o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</body>
+</html>
