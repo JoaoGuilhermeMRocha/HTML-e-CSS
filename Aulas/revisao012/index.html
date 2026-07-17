@@ -3,13 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="C:\Users\guilh\OneDrive\Programação - Estudos\HTML e CSS\Imagens\icone.ico" type="image/x-icon">
     <title>Tipografia</title>
 </head>
 <body>
     <main>
         <h1>Para oque serve, a tipografia?</h1>
-        <p></p>
+        <p>
+            A tipografia é, básicamente, o estudo da escolha e do arranjo de fontes para fins comunicativos. A partir dela, é possível criar designs que melhoram a legibilidade e a estética de um texto.
+            <br>
+            Assim como as cores, a tipografia também pode transmitir emoções e influenciar a percepção do conteúdo. A escolha da fonte, o tamanho, o espaçamento e o estilo podem impactar a forma como uma mensagem é recebida pelo público. Como por exemplo, a caligrafia de uma professora de português, geralmente, é mais legível, clara, e fácil de ler, do que a caligrafia de um professor de matemáttica, que geralmente é mais difícil de ler, e menos clara. Isso se aplica também para as fontes digitais, ou impressas, que podem ser mais ou menos legíveis, dependendo de sua escolha e aplicação.
+        </p>
+
+        <h1>Tipos de fontes</h1>
+        <p>
+            Existem diversos tipos de fontes, cada uma com suas características e propósitos. As principais categorias incluem:
+            <ul>
+                <li>Serifadas: Possuem pequenos traços ou "serifas" nas extremidades das letras. São frequentemente associadas a uma aparência clássica e tradicional.</li>
+                <li>Sem serifa (Sans-serif): Não possuem serifas, resultando em um visual mais limpo e moderno. São amplamente utilizadas em interfaces digitais.</li>
+                <li>Manuscritas (Handwriting/Script): Imitam a escrita à mão, transmitindo uma sensação de personalidade e informalidade.</li>
+                <li>Monoespaçadas (Monospace): Cada caractere ocupa o mesmo espaço horizontal, sendo comumente usadas em programação e design técnico.</li>
+                <li>Decorativas: Possuem estilos únicos e chamativos, sendo usadas para criar impacto visual em títulos e elementos gráficos.</li>
+            </ul>
+            Cada tipo de fonte pode ser escolhida com base no contexto e na mensagem que se deseja transmitir. A combinação adequada de fontes também é importante para criar hierarquia visual e melhorar a experiência do usuário.
+        </p>
+
+        <h1>Como aplicar a tipografia no CSS</h1>
+        <p>
+            Podemos usar a propriedade "font-family" no CSS para definir a fonte de um elemento, especificando uma lista de fontes alternativas, caso a primeira não esteja disponível.
+            <br>
+            Por exemplo: font-family: Arial, Helvetica, sans-serif; - Nesse caso, o navegador tentará usar a fonte Arial. Se não estiver disponível, ele tentará Helvetica e, se nenhuma das duas estiver disponível, ele usará uma fonte sem serifa genérica.
+        </p>
+        
+        <h2>Editando as fontes</h2>
+        <h3>Tamanho da fonte</h3>
+        <p>
+            A propriedade "font-size" é utilizada para definir o tamanho da fonte de um elemento. Ela pode ser especificada em diferentes unidades, como pixels (px), pontos (pt), porcentagens (%), entre outras. Porém, o mais recomendado é utilizar px, quando sabemos em que tipo de dispositivo, ou tela, o conteúdo será exibido, pois essa é uma unidade absoluta, ou seja, não muda conforme o tamanho da tela ou o zoom do navegador. Agora, quando não sabemos o tamanho exato, podemos utilizar em, que é uma unidade relativa, e se adapta ao tamanho da tela, sempre com base na fonte padrão do código.
+        </p>
+
+        <h3>Peso da fonte</h3>
+        <p>
+            A propriedade "font-weight" é utilizada para definir o peso da fonte de um elemento. Ela pode ser especificada como: "lighter", "normal", "bold", "bolder",  ou valores numéricos entre 100 e 900. Mas não são todas as fontes que suportam todos esses valores, o mais comum de ser aceito pelas fontes são "normal" e "bold", ou em valores numéricos, de 400 a 700. A nível de comparação, "normal" é equivalente a escrita comum dos editores de texto, enquanto "bold" é equivalente ao negrito.
+        </p>
+
+        <h3>Estilos da fonte</h3>
+        <p>
+            A propriedade "font-style" é utilizada para definir o estilo da fonte de um elemento. Ela pode ser especificada como: "normal", "italic" e "oblique". O valor "normal" é o estilo padrão, enquanto "italic" e "oblique" são estilos itálicos, sendoo que com o "oblique", podemos definor o grau de inclinação da fonte.
+            <br>
+            A propriedade "text-decoration" é utilizada para adicionar decorações ao texto, como sublinhado, linha sobre o texto ou linha através do texto. Ela pode ser especificada como: "none", "underline", "overline" e "line-through". O valor "none" remove qualquer decoração existente, enquanto os outros valores adicionam a decoração correspondente.
+        </p>
+
+        <h3>Facilidando a nossa vida</h3>
+        <p>
+            Podemos muito bem criar classes no CSS, para espeficicando cada configuração isoladamente, por exemplo: 
+                <pre>
+                    <code>
+                        h1 {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 3em;
+                        font-weight: bold;
+                        font-style: italic;
+                        }
+                    </code>
+                </pre>
+            Ou podemos criar uma classe, de uma só linha, que engloba todas as configurações, por exemplo:
+                <pre>
+                    <code>
+                        h1 {
+                        font: italic bold 3em Arial, Helvetica, sans-serif;
+                        }
+                    </code>
+                </pre>
+            Isso é um "shorthand", uma função que agiliza o trabalho, mas deve sempre seguir a sintaxe => font: [estilo] [peso] [tamanho] [família de fontes - separadas por vírgula];
+            <br>
+            Onde os valores entre colchetes são opcionais, mas a ordem deve ser respeitada.
+        </p>
+        <h3>Alinhamento das fontes</h3>
+        <p>
+            A propriedade "text-align" é utilizada para definir o alinhamento do texto dentro de um elemento. Ela pode ser especificada como: "left", "right", "center" e "justify". O valor "left" alinha o texto à esquerda, "right" alinha à direita, "center" centraliza o texto e "justify" justifica o texto, ajustando o espaçamento entre as palavras para que as linhas fiquem alinhadas tanto à esquerda quanto à direita.
+            <br>
+            Temos tambbém a propriedade "text-indent", que é utilizada para definir a indentação da primeira linha de um parágrafo. Ela pode ser especificada em diferentes unidades, como pixels (px), pontos (pt), porcentagens (%), entre outras. O valor positivo aumenta a indentação, enquanto o valor negativo reduz a indentação.
+        </p>
     </main>
 </body>
 </html>
