@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="C:\Users\guilh\OneDrive\Programação - Estudos\HTML e CSS\Imagens\icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Classificação de elementos</title>
+</head>
+<body>
+    <main>
+        <h1 id="IDeClass">ID e Class</h1>
+
+        <h2 class="ID">ID</h2>
+        <p>
+            Podemos segmentar elementos usando o atributo "id", por exemplo: <br>
+            No site temos dois h1, e queremos que cada um tenha uma cor diferente. Para fazer isso, podemos diferenciar eles como <code>&lt;h1 id="titulo1"&gt;</code> e <code>&lt;h1 id="titulo2"&gt;</code> <br>
+            E no CSS, podemos definir a cor de cada um usando o seletor de ID, <code>h1#titulo1 {}</code> e <code>h1#titulo2 {}</code> <br>
+            No HTML, classificamos o elemento com id=, mas no CSS, traduzimos esse classificador para #.
+        </p>
+        <p>
+            Mas temos um porém no uso do ID, que é o fato de que ele só pode ser usado uma vez por página, ou seja, não podemos ter dois elementos com o mesmo ID. Por isso, quando queremos aplicar a mesma configuração para vários elementos, devemos usar o atributo "class".
+        </p>
+
+        <h2 class="Class">Class</h2>
+        <p>
+            Podemos segmentar elementos usando o atributo "class", por exemplo: <br>
+            No site temos vários h2, e queremos que alguns tenham certas propriedades, e outros, tenham outras propriedades. Então, podemos diferenciar eles como <code>&lt;h2 class="conjunto1"&gt;</code> e <code>&lt;h2 class="conjunto2"&gt;</code> <br>
+            E no CSS, podemos definir as suas propriedades com <code>.conjunto1 {}</code> e <code>.conjunto2 {}</code> <br>
+            No HTML, classificamos o elemento com class=, mas no CSS, traduzimos esse classificador para ., sem a necessidade de colocar o nome do elemento antes do ponto. <br>
+            Ao utilizar a class, nós não estamos limitados a um único elemento, ou seja, podemos ter vários elementos com a mesma class. Por conta disso, podemos aplicar .conjunto1, ou o .conjunto2, a outras partes do HTML. Para fazer isso, usamos <code>&lt;span class=""&gt; Lorem &lt;/span&gt;</code>.
+        </p>
+        <p>
+            Com o class, vários elementos podem ter a mesma classificação.
+        </p>
+        <p>
+            Nós também podemos unir o uso de ID e class, colocando ambos dentro do mesmo &lt;&gt;. Porém o ID sempre irá se sobresair a class.
+            <code>&lt;p id="" class=""&gt;Lorem&lt;/p&gt;</code>
+            Também podemos unir mais de uma class dentro do mesmo &lt;&gt;, elas só devem ser separadas com um espaço entre elas.
+            <code>&lt;p class="class1 class2"&gt;Lorem&lt;/p&gt;</code>
+        </p>
+
+        <h1>Pseudo-classes</h1>
+        <p class="PseudoClass">
+            As pseudo-classes são classes especiais que podem ser aplicadas dentro do CSS. Elas são representadas por um ":pseudo-classe", após a uma classe já definida.<br>
+            Dessa forma, podemos aplicar condições especiais aos elementos, como por exemplo, quando o mouse estiver sobre eles, ou quando forem clicados. <br>
+            Com as pseudo-classes também podemos definir ordens. Por exemplo, um paragrafo que esteja dentro de um elemento, pode ser diferente de outro paragrafo, do mesmo elemento, que esteja em outra posição. Para isso podemos usar elemento ou classe, fazendo com que a pseudo-classe que esteja após a isso, só seja aplicado com essas condições dentro do HTML.
+        </p>
+
+        <h1>Pseudo-elementos</h1>
+        <p class="PseudoElemento">
+            Os pseudo-elementos são elementos especiais que podem ser aplicados dentro do CSS. Eles são representados por um "::pseudo-elemento", após a um elemento que esteja em uso no HTML, ou até mesmo a uma classe já definida.
+        </p>
+    </main>
+</body>
+</html>
