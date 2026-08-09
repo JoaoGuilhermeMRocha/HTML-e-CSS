@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="C:\Users\guilh\OneDrive\Programação - Estudos\HTML e CSS\Imagens\icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Modelos de caixa</title>
+</head>
+<body>
+    <main>
+        <h1>Caixa</h1>
+        <p>
+            Tudo que é apresentado na tela, a partir do HTML, faz parte de uma caixa. Oque nós podemos fazer é manipular essas caixas, para que elas se adequem ao nosso site.
+            <br>
+            A caixa é composta por:
+            <ul>
+                <li>Conteúdo</li>
+                <li>Largura (width) e altura (height)</li>
+                <li>Borda (border)</li>
+                <li>Preenchimento (padding)</li>
+                <li>Margem (margin)</li>
+                <li>Contorno (outline)</li>
+            </ul>
+            Cada uma dessas partes de composição da caixa podem ser manipuladas, atráves do CSS, para que possamos fazer a adequação da caixa ao nosso estilo.
+        </p>
+        <h1>Tipos de caixa</h1>
+        <p>
+            Existem dois tipos de caixa, a BOX-LEVEL, e a INLINE-LEVEL. Cada uma possui uma aplicação diferente no conteúdo.
+        </p>
+        <h2>BOX-LEVEL</h2>
+        <p>
+            Esse tipo de caixa ela ocupa 100% da largura do visualizador e sempre é aplicada em uma "linha livre". <br>
+        </p>
+        <h2>INLINE-LEVEL</h2>
+        <p>
+            Como o nome diz, essa é uma caixa que respeita a linha que ela está alocada, seguindo a sequencia de escrita na IDE e no navegador.
+        </p>
+        <h1>Aplicação das caixas</h1>
+        <p>
+            Como o restante dos elementos, podemos aplicar as caixas dentro ou fora de elementos já existentes. <br> 
+            Então podemos trabalhar com as caixas de várias formas, aplicando dentro de um elemento já existente, criando a caixa e adicionando elementos dentro dela, ou até mesmo colocando caixas dentro de caixas. <br>
+            Para aplicarmos os dois tipo de caixa, utilizamos o elementos <code>&lt;div&gt;</code> para a BOX-LEVEL, e o elemento <code>&lt;span&gt;</code> para a INLINE-LEVEL.
+        </p>
+        <h1>TAGs de grupo | Caixas de agrupamento</h1>
+        <p>
+            Mesmo tendo elementos diretos para os dois tipos de caixa, o próprio HTML já instrui que determinados elemetos são daquele tipo específico de caixa. <br>
+            Por conta disso, existem determinados elementos que nos ajudam a organizar o nosso código, assim evitamos utilizar divs e spans a todo momento, essas são as tags de grupo.
+            <ul>
+                <li>Cabeçalho - header</li>
+                <li>Menu de links - nav</li>
+                <li>Conteúdo - Main</li>
+                <li>Seção - section</li>
+                <li>Artigo - article</li>
+                <li>Complemento - aside</li>
+                <li>Rodapé - footer</li>
+            </ul>
+            Todas esses elementos podem ser personalizados, isoladamente, com o CSS, senão, eles irão "puxar" a mesma formatação do body.
+        </p>
+        <h1>Estilos de caixa</h1>
+        <p>
+            Como as caixas são elementos que podem ser manipulados via CSS, podemos aplicar a elas as configurações comuns do CSS, como cores, arredondamento de bordas, sombras  e etc. <br>
+            Fora que também podemos aplicar o CSS nas caixas com <em>shorthands</em>, para facilitar a escrita do código. <br>
+            Algo que não é muito usual, mas que pode ser feito, é aplicar imagens como "fundo" das caixas.
+        </p>
+    </main>
+</body>
